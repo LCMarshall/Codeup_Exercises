@@ -17,11 +17,11 @@ if ($b >= $c) {
 }
 if ($b === $c) {
     echo "$b is identical to $c";
-{   elseif ($b == $c) {
+{ elseif ($b == $c) {
     echo "$b is equal to $c";
-}   elseif ($b !== $c) {
+} elseif ($b !== $c) {
     echo "$b is not identical to $c";
-}   else {
+} else {
     echo "$b is not equal to $c";
 }
 
