@@ -24,5 +24,8 @@ $books = array(
 );
 
 	foreach ($books as $title => $book) {
+		if ($book['published'] > 1950){
     	echo "The book title is $title which was published in $book[published] and the author is $book[author] and contains $book[pages]" . PHP_EOL;  
+   
     }
+};
