@@ -1,11 +1,11 @@
 <?php
 
 $fruits = array (
-		'apples', 
-		'oranges', 
-		'bananas',
-		'kiwi',
-		'cantaloupe'
+		'apples' => 'red', 
+		'oranges' => 'orange', 
+		'bananas' => 'yellow',
+		'kiwi' => 'green',
+		'cantaloupe' => 'peach'
 		);
 
 // foreach ($fruits as $key => $value) {
@@ -13,8 +13,10 @@ $fruits = array (
 // }
 
 
-for ($i =0 ; $i  < count($fruits) ; $i++ ) { 
-	echo "Fruit name $fruits[$i]\n";
+// for ($i =0 ; $i  < count($fruits) ; $i++ ) { 
+// 	echo "Fruit name $fruits[$i]\n";
+// }
+
+foreach ($fruits as $fruit => $color) {
+	echo $fruit . " has a color of " . $color . PHP_EOL;
 }
-
-
