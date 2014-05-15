@@ -9,9 +9,10 @@
 // Refactor the error messages into their own function, have the other functions use it for error messaging.
 
 
+
 function add($a, $b) {
 	if(is_numeric($a) && is_numeric ($b)){
-		echo $a + $b . PHP_EOL;
+		echo $a + $b;
 	}else {
 		echo "Error: both {$a} and {$b} should be numbers";
 	}
@@ -20,7 +21,7 @@ function add($a, $b) {
 
 function subtract($a, $b) {
     if(is_numeric($a) && is_numeric ($b)){
-		echo $a - $b . PHP_EOL;
+		echo $a - $b;
 	}else {
 		echo "Error: both {$a} and {$b} should be numbers";
 	}
@@ -29,7 +30,7 @@ function subtract($a, $b) {
 
 function multiply($a, $b) {
     if(is_numeric($a) && is_numeric ($b)){
-		echo $a * $b . PHP_EOL;
+		echo $a * $b;
 	}else {
 		echo "Error: both {$a} and {$b} should be numbers";
 	}
@@ -59,7 +60,22 @@ function modulus($a, $b) {
 	echo PHP_EOL;
 }
 
-add (1, b);
+function error_message ($a, $b) {
+	if(!(is_numeric($a) && is_numeric ($b))) {
+		echo "Error: both {$a} and {$b} should be numbers";
+	}
+	echo PHP_EOL;
+}
+
+function test($a, $b) {
+	if(is_numeric($a) && is_numeric ($b)){
+		echo $a + $b;
+	} else {
+		echo error_message($a, $b);
+	}
+	echo PHP_EOL;    
+}	
+test (1, test);
 // // subtract (10, a);
 // // multiply (2, b);
 // divide (2, test);
