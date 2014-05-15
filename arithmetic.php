@@ -13,7 +13,7 @@ function add($a, $b) {
 	if(is_numeric($a) && is_numeric ($b)){
 		echo $a + $b . PHP_EOL;
 	}else {
-		echo 'Error: both $a and $b should be numbers';
+		echo "Error: both {$a} and {$b} should be numbers";
 	}
 	echo PHP_EOL;    
 }
@@ -22,7 +22,7 @@ function subtract($a, $b) {
     if(is_numeric($a) && is_numeric ($b)){
 		echo $a - $b . PHP_EOL;
 	}else {
-		echo 'Error: both $a and $b should be numbers';
+		echo "Error: both {$a} and {$b} should be numbers";
 	}
 	echo PHP_EOL;
 }
@@ -31,33 +31,38 @@ function multiply($a, $b) {
     if(is_numeric($a) && is_numeric ($b)){
 		echo $a * $b . PHP_EOL;
 	}else {
-		echo 'Error: both $a and $b should be numbers';
+		echo "Error: both {$a} and {$b} should be numbers";
 	}
 	echo PHP_EOL;
 }
 
 function divide($a, $b) {
-    if(is_numeric($a) && is_numeric ($b)){
-		echo $a / $b . PHP_EOL;
-	}else {
-		echo 'Error: both $a and $b should be numbers';
+    if ($b == 0 && is_numeric ($b)) {
+    	echo "Cannot divide by zero";
+	} else{
+		if (is_numeric($a) && is_numeric ($b)){
+		echo $a / $b;}
+		else {
+		echo "Error: both {$a} and {$b} should be numbers";
+		}
 	}
 	echo PHP_EOL;
 }
+	
 
 function modulus($a, $b) {
 	if(is_numeric($a) && is_numeric ($b)){
-		echo $a % $b . PHP_EOL;
+		echo $a % $b;
 	}else {
-		echo 'Error: both $a and $b should be numbers';
+		echo "Error: both {$a} and {$b} should be numbers";
 	}
 	echo PHP_EOL;
 }
 
-add (1, 1);
-subtract (10, a);
-multiply (2, b);
-divide (2, c);
-modulus (10, d);
+add (1, b);
+// // subtract (10, a);
+// // multiply (2, b);
+// divide (2, test);
+// // modulus (10, d);
 
 ?>
