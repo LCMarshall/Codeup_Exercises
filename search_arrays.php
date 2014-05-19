@@ -11,7 +11,7 @@ $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 
 function name_search($search, $names){
 
-$result = array_search($search, $names);
+	$result = array_search($search, $names);
 
 	if($result !== false) {
 		return TRUE;
@@ -19,4 +19,18 @@ $result = array_search($search, $names);
 		return FALSE;
 	}
 }
-echo name_search('Mike', $names);
+// echo name_search('Mike', $names);
+
+function compare_count($array1, $array2){
+	$count = 0;
+	foreach($array1 as $name) {
+		if(name_search($name, $array2)) {
+		$count = $count + 1;	
+		}
+	}
+	return $count;
+
+}
+echo compare_count($names, $compare);
+
+
