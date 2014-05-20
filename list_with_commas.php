@@ -42,9 +42,14 @@ $physicists_array = explode(', ', $physicists_string);
 
 
 
-function humanized_list($array) {
+function humanized_list($array, $alphabet = FALSE) {
 	//determine what the last element of the array is
-	sort($array);
+	//create if statement to determine if sort should be applied
+
+	if ($alphabet) {
+		sort($array);
+	}
+
 	$end = end($array);
 	array_pop($array);
 	//add the popped array value back on to the array and include 'and'
@@ -52,6 +57,8 @@ function humanized_list($array) {
 	array_push($array, ('and ' . $end));
 	$list_of_names = implode(', ', $array);
 	return $list_of_names;
+
+
 
 }
 
