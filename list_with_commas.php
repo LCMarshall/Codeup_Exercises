@@ -44,7 +44,7 @@ $physicists_array = explode(', ', $physicists_string);
 
 function humanized_list($array) {
 	//determine what the last element of the array is
-	
+	sort($array);
 	$end = end($array);
 	array_pop($array);
 	//add the popped array value back on to the array and include 'and'
@@ -55,5 +55,16 @@ function humanized_list($array) {
 
 }
 
+// Update your code to list the physicists by first name, in alphabetical order.
+
+// Create a second argument to make alphabetical sorting optional.
+
+// Default alphabetical sorting to false. If no args are passed, no sorting takes place.
+
+
+
+
+
 $name = humanized_list($physicists_array);
 echo "Some of the most famous fictional theoretical physicists are {$name}.\n";
+
